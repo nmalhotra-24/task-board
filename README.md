@@ -77,42 +77,7 @@ task-board/
 └── README.md                    # This file
 ```
 
-## Quick Start (Both Servers)
-
-**Terminal 1 - Backend:**
-```bash
-cd task-board/backend
-# Optional: Activate virtual environment if you have one
-# source venv/bin/activate  # On macOS/Linux
-uvicorn app.main:app --reload --port 8000
-```
-
-**Terminal 2 - Frontend:**
-```bash
-cd task-board/frontend
-npm start
-```
-
-Then open `http://localhost:3000` in your browser!
-
-**API Documentation**: Interactive API docs available at `http://localhost:8000/docs` (Swagger UI) and `http://localhost:8000/redoc` (ReDoc)
-
-**Note**: Make sure backend starts on port 8000 as frontend is configured to connect to that port.
-
-## Shutting Down Servers
-
-**Stop Backend:**
-```bash
-pkill -f "uvicorn app.main:app"
-```
-
-**Stop Frontend:**
-```bash
-pkill -f "react-scripts start"
-```
-
-
-## Detailed Backend Setup
+## Backend Setup
 
 1. Navigate to backend directory:
 ```bash
@@ -147,7 +112,7 @@ API documentation: `http://localhost:8000/docs`
 
 **Database**: SQLite is used by default (taskboard.db). No manual setup required.
 
-### Detailed Frontend Setup
+###  Frontend Setup
 
 1. Navigate to frontend directory:
 ```bash
@@ -156,7 +121,7 @@ cd frontend
 
 2. Install dependencies:
 ```bash
-npm install
+npm install --legacy-peer-deps
 ```
 
 3. Start the development server:
@@ -164,7 +129,24 @@ npm install
 npm start
 ```
 
-Frontend will be available at: `http://localhost:3000`
+Then open `http://localhost:3000` in your browser!
+
+**API Documentation**: Interactive API docs available at `http://localhost:8000/docs` (Swagger UI) and `http://localhost:8000/redoc` (ReDoc)
+
+**Note**: Make sure backend starts on port 8000 as frontend is configured to connect to that port.
+
+## Shutting Down Servers
+
+**Stop Backend:**
+```bash
+pkill -f "uvicorn app.main:app"
+```
+
+**Stop Frontend:**
+```bash
+pkill -f "react-scripts start"
+```
+
 
 ## Running Tests
 
