@@ -133,7 +133,11 @@ Then open `http://localhost:3000` in your browser!
 
 **API Documentation**: Interactive API docs available at `http://localhost:8000/docs` (Swagger UI) and `http://localhost:8000/redoc` (ReDoc)
 
-**Note**: Make sure backend starts on port 8000 as frontend is configured to connect to that port.
+**Important Notes**:
+- Make sure the **backend is running first** on port 8000 before starting the frontend
+- Run backend and frontend **in separate terminal windows** (they both need to run simultaneously)
+- Frontend is pre-configured to connect to `http://localhost:8000` for the API
+- The application will be available at `http://localhost:3000` once both servers are running
 
 ## Shutting Down Servers
 
